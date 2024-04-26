@@ -16,12 +16,11 @@ def home():
 def predict():
     # Get user input from the form
     age = int(request.form['age'])
-    gender = int(request.form['gender'])
     estimated_salary = int(request.form['estimated_salary'])
     
     # Make prediction
-    prediction = model.predict(np.array([[age, estimated_salary, gender]]))
-    result = "will purchase the product" if prediction[0] == 0 else "will not purchase the product"
+    prediction = model.predict([[age, estimated_salary]])
+    result = "will purchase the product" if prediction[0] == 1 else "will not purchase the product"
     
     return render_template('result.html', result=result)
 
