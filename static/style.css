@@ -40,14 +40,14 @@ label {
   font-weight: bold;
   margin-bottom: 5px;
   display: inline-block;
-  width: 120px; /* Consistent label width */
+  width: 50px; /* Consistent label width */
   text-align: right;
 }
 
 input[type="text"],
 select {
   width: calc(100% - 130px); /* Adjust based on label width */
-  padding: 7px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -57,7 +57,7 @@ select {
 button[type="submit"] {
   background-color: #e74c3c; /* Red color with a hint of orange */
   color: white;
-  padding: 12px 25px;
+  padding: 8px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
