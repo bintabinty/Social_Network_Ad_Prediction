@@ -1,64 +1,69 @@
+/* Basic structure and layout */
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   background-image: url("../static/images_background.jpg"); /* Replace with your image path */
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 100vh; /* Ensures background fills viewport height */
-  display: flex; /* Center content vertically */
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
+  opacity: 0.9; /* Reduce background image opacity slightly */
 }
 
 .container {
-  background-color: rgba(240, 141, 141, 0.8); /* White background with some transparency */
-  border-radius: 10px; /* Rounded corners */
+  width: 600px; /* Adjust width as needed */
+  margin: 50px auto;
   padding: 30px;
-  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Title styling */
+
 h1 {
-  font-size: 1em;
-  margin-bottom: 20px;
+  font-size: 2.2em;
+  font-family: 'Raleway', sans-serif; /* Example font family */
+  text-align: center;
+  color: #333;
+}
+
+/* Form styling */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 label {
-  display: block;
+  font-weight: bold;
   margin-bottom: 5px;
+  display: inline-block;
+  width: 120px; /* Consistent label width */
+  text-align: right;
 }
 
-input[type="number"] {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #f1bebe;
-  border-radius: 5px;
-  margin-bottom: 10px; /* Added margin-bottom */
+input[type="text"],
+select {
+  width: calc(100% - 130px); /* Adjust based on label width */
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
+/* Button styling */
 
 button[type="submit"] {
-  background-color: #3d0cf0; /* Blue color */
+  background-color: #e74c3c; /* Red color with a hint of orange */
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px; /* Added margin-top */
+  transition: background-color 0.2s ease-in-out;
 }
 
 button[type="submit"]:hover {
-  background-color: #723ea3; /* Darker blue on hover */
-}
-
-h2 {
-  margin-top: 30px;
-}
-
-h3 {
-  font-weight: bold;
-}
-
-.link {
-  margin-top: 20px; /* Added margin-top */
+  background-color: #c0392b; /* Darker red on hover */
 }
